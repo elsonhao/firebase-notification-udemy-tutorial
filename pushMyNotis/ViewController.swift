@@ -1,25 +1,27 @@
 //
 //  ViewController.swift
-//  pushMyNotis
+//  pushmynotifs
 //
-//  Created by 黃毓皓 on 2016/10/11.
-//  Copyright © 2016年 ice elson. All rights reserved.
+//  Created by Jonny B on 9/19/16.
+//  Copyright © 2016 Jonny B. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        FIRMessaging.messaging().subscribe(toTopic: "/topics/news")
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
+    
 }
 
